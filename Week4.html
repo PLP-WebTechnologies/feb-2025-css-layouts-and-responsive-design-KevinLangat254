@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .main {
+      flex: 3;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    .sidebar {
+      flex: 1;
+      background: #ddd;
+      padding: 20px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Tablet */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      nav a {
+        padding: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div>MySite</div>
+      <div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="main">
+      <h1>Welcome</h1>
+      <p>This is a sample responsive layout using Flexbox and media queries.</p>
+    </div>
+    <div class="sidebar">
+      <h3>Sidebar</h3>
+      <p>Additional info goes here.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Responsive Layout</p>
+  </footer>
+
+</body>
+</html>
